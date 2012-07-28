@@ -8,7 +8,7 @@ apply plugin: 'java'
 apply plugin: 'maven'
 
 project.group 'org.slf4j'
-project.version '1.0'
+project.version '1.5.8'
 
 repositories { mavenCentral() }
 
