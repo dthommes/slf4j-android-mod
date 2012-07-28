@@ -6,7 +6,9 @@
 
 apply plugin: 'java'
 apply plugin: 'maven'
-//version = '0.1.0.SNAPSHOT'
+
+project.group 'org.slf4j'
+project.version '1.0'
 
 repositories { mavenCentral() }
 
@@ -16,11 +18,5 @@ dependencies {
 
 
 task writeNewPom  << {
-    pom{
-    	project {
-    		version '1.0'
-			groupId 'org.slf4j.android.mod'
-			artifactId 'slf4j-android-mod'
-        }
-    }.writeTo("pom.xml")
+    pom{}.writeTo("pom.xml")
 }
