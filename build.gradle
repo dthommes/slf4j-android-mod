@@ -1,0 +1,26 @@
+/**
+ * Created on 2012-07-26
+ *
+ * © 2012 Daniel Thommes
+ */
+
+apply plugin: 'java'
+apply plugin: 'maven'
+//version = '0.1.0.SNAPSHOT'
+
+repositories { mavenCentral() }
+
+dependencies {
+	compile 'com.google.android:android:2.3.3'
+}
+
+
+task writeNewPom  << {
+    pom{
+    	project {
+    		version '1.0'
+			groupId 'org.slf4j.android.mod'
+			artifactId 'slf4j-android-mod'
+        }
+    }.writeTo("pom.xml")
+}
