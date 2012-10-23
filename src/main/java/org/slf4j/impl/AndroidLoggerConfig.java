@@ -53,7 +53,7 @@ public class AndroidLoggerConfig {
 				loadGlobalLogLevel(props);
 				loadTag(props);
 			}
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			if (inStream != null) {
